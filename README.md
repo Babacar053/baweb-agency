@@ -1,4 +1,4 @@
-# Babacar Prestige Web — site vitrine
+# BaWeb Agency — site vitrine
 
 Site vitrine d'agence web, **100 % statique** : HTML + Bootstrap 5 + CSS + JavaScript natif.
 Aucun langage serveur, aucune base de données, aucun build : il s'héberge gratuitement sur **GitHub Pages**.
@@ -55,7 +55,7 @@ npx serve .
    ```bash
    git init
    git add .
-   git commit -m "Site Babacar Prestige Web"
+   git commit -m "Site BaWeb Agency"
    git branch -M main
    git remote add origin https://github.com/Babacar053/baweb-agency.git
    git push -u origin main
