@@ -1,0 +1,44 @@
+# Déploiement automatique sur GitHub Pages à chaque push sur "main".
+# Aucun build nécessaire : le site est 100 % statique (HTML, CSS, JS).
+name: Déployer sur GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Préparer le dossier publié
+        run: |
+          mkdir _site
+          cp -r *.html robots.txt sitemap.xml .nojekyll assets _site/
+
+      - name: Configurer Pages
+        uses: actions/configure-pages@v5
+
+      - name: Envoyer le site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Déployer
+        id: deployment
+        uses: actions/deploy-pages@v4

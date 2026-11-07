@@ -1,0 +1,79 @@
+# BaWeb Agency — site vitrine
+
+Site vitrine d'agence web, **100 % statique** : HTML + Bootstrap 5 + CSS + JavaScript natif.
+Aucun langage serveur, aucune base de données, aucun build : il s'héberge gratuitement sur **GitHub Pages**.
+
+## Structure
+
+```
+baweb-agency/
+├── index.html            Accueil
+├── services.html         Nos services
+├── realisations.html     Portfolio
+├── tarifs.html           Tarifs + fonctionnalités offertes + FAQ
+├── a-propos.html         À propos
+├── contact.html          Formulaire de devis → WhatsApp
+├── 404.html              Page introuvable
+├── robots.txt / sitemap.xml / .nojekyll
+├── assets/
+│   ├── css/style.css     Styles (couleurs dans :root)
+│   ├── js/config.js      ⭐ Nom, WhatsApp, téléphone, e-mail, tarifs, réseaux
+│   ├── js/data.js        ⭐ Services, réalisations, offres, processus, formules
+│   ├── js/main.js        En-tête, pied de page, rendu, animations, formulaire
+│   └── img/              Favicon, image de partage, captures du portfolio
+└── .github/workflows/deploy.yml   Déploiement automatique
+```
+
+## Modifier les contenus
+
+| Je veux changer…                         | Fichier                         |
+|------------------------------------------|---------------------------------|
+| Numéro WhatsApp, téléphone, e-mail        | `assets/js/config.js`           |
+| Nom de l'agence, tarif du site vitrine    | `assets/js/config.js`           |
+| Réseaux sociaux (s'affichent si remplis)  | `assets/js/config.js`           |
+| Ajouter une réalisation                   | `assets/js/data.js` → `PROJECTS`|
+| Services, fonctionnalités offertes        | `assets/js/data.js`             |
+| Couleurs                                  | `assets/css/style.css` (`:root`)|
+
+**Ajouter une réalisation :** déposez une capture (1200 × 750, format `.webp`) dans
+`assets/img/portfolio/`, puis copiez un bloc dans `PROJECTS` de `data.js`.
+Elle apparaît automatiquement sur l'accueil, la page Réalisations et À propos.
+
+## Tester en local
+
+Ouvrez le dossier avec XAMPP (`http://localhost/.../baweb-agency/`) ou n'importe quel
+serveur statique, par exemple :
+
+```bash
+npx serve .
+```
+
+## Publier sur GitHub Pages
+
+1. Créez un dépôt sur GitHub nommé **`baweb-agency`** (public).
+2. Dans ce dossier :
+   ```bash
+   git init
+   git add .
+   git commit -m "Site BaWeb Agency"
+   git branch -M main
+   git remote add origin https://github.com/Babacar053/baweb-agency.git
+   git push -u origin main
+   ```
+3. Sur GitHub : **Settings → Pages → Build and deployment → Source : « GitHub Actions »**.
+4. L'onglet **Actions** lance le déploiement (≈ 1 minute). Le site est en ligne sur
+   `https://babacar053.github.io/baweb-agency/`.
+
+Chaque `git push` sur `main` republie le site automatiquement.
+
+### Si vous changez l'adresse du site
+
+(autre nom de dépôt ou nom de domaine personnalisé), remplacez
+`https://babacar053.github.io/baweb-agency/` partout :
+balises `canonical` et `og:` des pages HTML, `robots.txt`, `sitemap.xml` et `url` dans `config.js`.
+
+## Notes
+
+- Les URL propres (`/services`, `/tarifs`…) fonctionnent nativement sur GitHub Pages.
+- Le formulaire n'enregistre aucune donnée : il prépare un message et ouvre WhatsApp.
+- Aucune clé secrète n'est utilisée.
