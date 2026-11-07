@@ -35,6 +35,16 @@
     { href: "contact.html", label: "Contact", id: "contact" }
   ];
 
+  // Pages « solutions » (référencement), listées dans le pied de page
+  var SEO_PAGES = [
+    ["creation-site-web-dakar.html", "Création de site web à Dakar"],
+    ["creation-site-vitrine.html", "Site vitrine"],
+    ["creation-site-e-commerce.html", "Site e-commerce"],
+    ["site-web-restaurant.html", "Site pour restaurant"],
+    ["site-web-ecole-formation.html", "Site pour école et formation"],
+    ["site-web-immobilier.html", "Site immobilier"]
+  ];
+
   /* ---------- En-tête ---------- */
   function renderHeader() {
     var el = document.getElementById("site-header");
@@ -109,11 +119,8 @@
       '<div class="col-6 col-lg-2"><h3>Navigation</h3><ul>' +
       NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") +
       "</ul></div>" +
-      '<div class="col-6 col-lg-3"><h3>Prestations</h3><ul>' +
-      '<li><a href="services.html#vitrine">Site vitrine</a></li>' +
-      '<li><a href="services.html#ecommerce">Site e-commerce</a></li>' +
-      '<li><a href="services.html#sur-mesure">Site sur mesure</a></li>' +
-      '<li><a href="tarifs.html#offerts">Fonctionnalités offertes</a></li>' +
+      '<div class="col-6 col-lg-3"><h3>Solutions</h3><ul>' +
+      SEO_PAGES.map(function (n) { return '<li><a href="' + n[0] + '">' + n[1] + "</a></li>"; }).join("") +
       "</ul></div>" +
       '<div class="col-lg-3"><h3>Contact</h3><ul class="footer-contact">' +
       '<li><i class="bi bi-whatsapp"></i><a href="' + waLink() + '" target="_blank" rel="noopener">WhatsApp</a></li>' +
@@ -166,12 +173,16 @@
   /* ---------- Sections alimentées par data.js ---------- */
   function renderProjects() {
     document.querySelectorAll("[data-projects]").forEach(function (grid) {
-      var limit = parseInt(grid.getAttribute("data-projects"), 10) || 0;
-      var list = (window.PROJECTS || []).slice(0, limit || undefined);
+      // data-projects="3" → les 3 premiers ; data-projects="Nom du projet" → ce projet seul
+      var attr = grid.getAttribute("data-projects") || "";
+      var limit = parseInt(attr, 10) || 0;
+      var col = grid.getAttribute("data-col") || "col-md-6 col-lg-4";
+      var list = (window.PROJECTS || []).filter(function (p) { return limit || !attr || p.name === attr; })
+        .slice(0, limit || undefined);
       grid.innerHTML = list.map(function (p, i) {
         var host = p.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
         return (
-          '<div class="col-md-6 col-lg-4 reveal" style="--d:' + i * 80 + 'ms">' +
+          '<div class="' + col + ' reveal" style="--d:' + i * 80 + 'ms">' +
           '<article class="project-card">' +
           '<a class="project-shot" href="' + esc(p.url) + '" target="_blank" rel="noopener" aria-label="Visiter ' + esc(p.name) + '">' +
           '<span class="browser-bar"><i></i><i></i><i></i><em>' + esc(host) + "</em></span>" +

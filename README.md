@@ -14,6 +14,7 @@ baweb-agency/
 ├── a-propos.html         À propos
 ├── contact.html          Formulaire de devis → WhatsApp
 ├── 404.html              Page introuvable
+├── creation-site-*.html, site-web-*.html   Pages SEO (solutions par métier)
 ├── robots.txt / sitemap.xml / .nojekyll
 ├── assets/
 │   ├── css/style.css     Styles (couleurs dans :root)

@@ -561,3 +561,18 @@ a.contact-tile:hover { border-color: var(--blue-100); transform: translateY(-3px
 .faq .accordion-button { font-weight: 700; color: var(--ink); padding: 1.15rem 1.3rem; box-shadow: none; }
 .faq .accordion-button:not(.collapsed) { background: var(--blue-50); color: var(--blue); }
 .faq .accordion-body { color: var(--muted); }
+
+/* ---------- Pages SEO (solutions par métier) ---------- */
+.breadcrumb-lite { flex-wrap: wrap; justify-content: center; }
+.seo-hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.8rem; }
+.seo-feats { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 991.98px) { .seo-feats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575.98px) { .seo-feats { grid-template-columns: 1fr; } .seo-hero-actions .btn { width: 100%; } }
+.seo-links { margin-top: 56px; text-align: center; }
+.seo-links h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+.seo-links div { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+.seo-links a {
+  padding: .55rem 1rem; border-radius: 999px; border: 1px solid var(--line); background: #fff;
+  font-weight: 600; font-size: .92rem; color: var(--ink); transition: border-color .2s, color .2s;
+}
+.seo-links a:hover { border-color: var(--blue); color: var(--blue); }
