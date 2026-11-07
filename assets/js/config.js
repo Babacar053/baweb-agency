@@ -4,8 +4,8 @@
    ========================================================= */
 window.SITE = {
   // Identité
-  name: "BaWeb Agency",
-  shortName: "BaWeb",
+  name: "Babacar Prestige Web",
+  shortName: "Babacar",
   tagline: "Votre site web complet livré en 48 heures.",
 
   // URL publique du site (utilisée pour le partage). Doit finir par "/".

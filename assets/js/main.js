@@ -1,5 +1,5 @@
 /* =========================================================
-   BaWeb Agency — script principal (JavaScript natif)
+   Babacar Prestige Web — script principal (JavaScript natif)
    Rendu de l'en-tête, du pied de page, des sections
    alimentées par data.js, animations et formulaire.
    ========================================================= */
