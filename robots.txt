@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://babacarprestige.com/sitemap.xml
+Sitemap: https://bawebagency.com/sitemap.xml

@@ -62,19 +62,19 @@ npx serve .
    ```
 3. Sur GitHub : **Settings → Pages → Build and deployment → Source : « GitHub Actions »**.
 4. L'onglet **Actions** lance le déploiement (≈ 1 minute). Le site est en ligne sur
-   `https://babacarprestige.com/` (ou `https://babacar053.github.io/baweb-agency/` sans domaine).
+   `https://bawebagency.com/` (ou `https://babacar053.github.io/baweb-agency/` sans domaine).
 
 Chaque `git push` sur `main` republie le site automatiquement.
 
-### Nom de domaine : babacarprestige.com
+### Nom de domaine : bawebagency.com
 
 Les balises `canonical`/`og:`, `robots.txt`, `sitemap.xml` et `url` dans `config.js`
-pointent déjà vers `https://babacarprestige.com/`. Une fois le domaine acheté :
+pointent déjà vers `https://bawebagency.com/`. Une fois le domaine acheté :
 
 1. Chez le registrar, zone DNS :
    - 4 enregistrements **A** sur `@` : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - 1 enregistrement **CNAME** `www` → `babacar053.github.io`
-2. GitHub → dépôt → **Settings → Pages → Custom domain** : `babacarprestige.com` → Save.
+2. GitHub → dépôt → **Settings → Pages → Custom domain** : `bawebagency.com` → Save.
 3. Quand la vérification DNS est verte, cocher **Enforce HTTPS**.
 
 ## Notes

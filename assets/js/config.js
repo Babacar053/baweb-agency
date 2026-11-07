@@ -9,7 +9,7 @@ window.SITE = {
   tagline: "Votre site web complet livré en 48 heures.",
 
   // URL publique du site (utilisée pour le partage). Doit finir par "/".
-  url: "https://babacarprestige.com/",
+  url: "https://bawebagency.com/",
 
   // Coordonnées
   // WhatsApp : format international SANS "+" ni espaces (ex. 221771234567)
