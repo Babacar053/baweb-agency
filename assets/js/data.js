@@ -38,6 +38,28 @@ window.PROJECTS = [
     image: "assets/img/portfolio/loyer-mensuel.webp",
     imageMobile: "assets/img/portfolio/loyer-mensuel-mobile.webp",
     tags: ["Annonces", "Recherche", "Espace propriétaire"]
+  },
+  {
+    name: "Themis Sport",
+    category: "Sport",
+    type: "Site de club et d'académie de sport",
+    description:
+      "Site complet d'un club et d'une académie de sport : disciplines, planning, tarifs, équipe, actualités, galerie et inscriptions, avec espace d'administration.",
+    url: "https://themis.rf.gd",
+    image: "assets/img/portfolio/themis-sport.webp",
+    imageMobile: "assets/img/portfolio/themis-sport-mobile.webp",
+    tags: ["Inscriptions", "Planning", "Administration"]
+  },
+  {
+    name: "Académie Banlieu FC",
+    category: "Sport",
+    type: "Site d'académie de football",
+    description:
+      "Site de l'Académie Banlieu FC à Pikine : catégories de U7 à U19, calendrier des matchs, actualités, vidéos et inscriptions en ligne.",
+    url: "https://banlieufc.infinityfree.io",
+    image: "assets/img/portfolio/academie-banlieu-fc.webp",
+    imageMobile: "assets/img/portfolio/academie-banlieu-fc-mobile.webp",
+    tags: ["Matchs", "Catégories", "Inscriptions"]
   }
 ];
 
