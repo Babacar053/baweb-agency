@@ -40,6 +40,12 @@ baweb-agency/
 `assets/img/portfolio/`, puis copiez un bloc dans `PROJECTS` de `data.js`.
 Elle apparaît automatiquement sur l'accueil, la page Réalisations et À propos.
 
+**Vitesse :** Bootstrap, la police et les icônes sont hébergés dans `assets/vendor/`.
+Seules les icônes utilisées sont incluses (`icons-subset.css`) : une nouvelle icône Bootstrap doit y être ajoutée.
+Pour une réalisation, une image réduite est facultative (champ `imageSmall`, 640 px de large).
+
+**Intro :** réglages dans `assets/js/intro.js`. Ajoutez `?intro=1` à l'adresse pour la revoir.
+
 ## Tester en local
 
 Ouvrez le dossier avec XAMPP (`http://localhost/.../baweb-agency/`) ou n'importe quel

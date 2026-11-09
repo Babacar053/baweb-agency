@@ -14,7 +14,8 @@ window.PROJECTS = [
       "Mise en valeur des produits du delta du Saloum (miel, huîtres, crevettes) avec catalogue produits, site multilingue et contact WhatsApp.",
     url: "https://saveursdudelta.com",
     image: "assets/img/portfolio/saveurs-du-delta.webp",
-    imageMobile: "assets/img/portfolio/saveurs-du-delta-mobile.webp",
+    imageSmall: "assets/img/portfolio/saveurs-du-delta-640.webp",
+    imageMobile: "assets/img/portfolio/saveurs-du-delta-mobile-200.webp",
     tags: ["Catalogue", "Multilingue", "WhatsApp"]
   },
   {
@@ -25,7 +26,8 @@ window.PROJECTS = [
       "Plateforme de l'École du Savon à Dakar : présentation des formations en saponification, inscriptions en ligne et boutique.",
     url: "https://ecoledusavon.com",
     image: "assets/img/portfolio/ecole-du-savon.webp",
-    imageMobile: "assets/img/portfolio/ecole-du-savon-mobile.webp",
+    imageSmall: "assets/img/portfolio/ecole-du-savon-640.webp",
+    imageMobile: "assets/img/portfolio/ecole-du-savon-mobile-200.webp",
     tags: ["Formations", "Inscriptions", "Boutique"]
   },
   {
@@ -36,7 +38,8 @@ window.PROJECTS = [
       "Plateforme d'annonces de location : recherche par ville, type de bien et budget, avec contact direct des propriétaires et agences.",
     url: "https://loyermensuel.com",
     image: "assets/img/portfolio/loyer-mensuel.webp",
-    imageMobile: "assets/img/portfolio/loyer-mensuel-mobile.webp",
+    imageSmall: "assets/img/portfolio/loyer-mensuel-640.webp",
+    imageMobile: "assets/img/portfolio/loyer-mensuel-mobile-200.webp",
     tags: ["Annonces", "Recherche", "Espace propriétaire"]
   },
   {
@@ -47,7 +50,8 @@ window.PROJECTS = [
       "Site complet d'un club et d'une académie de sport : disciplines, planning, tarifs, équipe, actualités, galerie et inscriptions, avec espace d'administration.",
     url: "https://themis.rf.gd",
     image: "assets/img/portfolio/themis-sport.webp",
-    imageMobile: "assets/img/portfolio/themis-sport-mobile.webp",
+    imageSmall: "assets/img/portfolio/themis-sport-640.webp",
+    imageMobile: "assets/img/portfolio/themis-sport-mobile-200.webp",
     tags: ["Inscriptions", "Planning", "Administration"]
   },
   {
@@ -58,7 +62,8 @@ window.PROJECTS = [
       "Site de l'Académie Banlieu FC à Pikine : catégories de U7 à U19, calendrier des matchs, actualités, vidéos et inscriptions en ligne.",
     url: "https://banlieufc.infinityfree.io",
     image: "assets/img/portfolio/academie-banlieu-fc.webp",
-    imageMobile: "assets/img/portfolio/academie-banlieu-fc-mobile.webp",
+    imageSmall: "assets/img/portfolio/academie-banlieu-fc-640.webp",
+    imageMobile: "assets/img/portfolio/academie-banlieu-fc-mobile-200.webp",
     tags: ["Matchs", "Catégories", "Inscriptions"]
   }
 ];
