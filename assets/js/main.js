@@ -188,7 +188,7 @@
           '<a class="project-shot" href="' + esc(p.url) + '" target="_blank" rel="noopener" aria-label="Visiter ' + esc(p.name) + '">' +
           '<span class="browser-bar"><i></i><i></i><i></i><em>' + esc(host) + "</em></span>" +
           '<img src="' + esc(p.imageSmall || p.image) + '"' +
-          (p.imageSmall ? ' srcset="' + esc(p.imageSmall) + " 640w, " + esc(p.image) + ' 1200w" sizes="(max-width: 767.98px) 92vw, 34vw"' : "") +
+          (p.imageSmall ? ' srcset="' + esc(p.imageSmall) + " 640w, " + esc(p.image) + ' 1200w" sizes="(max-width: 767.98px) 340px, 34vw"' : "") +
           ' alt="Capture d\'écran du site ' + esc(p.name) + '" width="1200" height="750" loading="lazy" decoding="async">' +
           (p.imageMobile
             ? '<span class="project-phone"><img src="' + esc(p.imageMobile) + '" alt="" width="390" height="844" loading="lazy" decoding="async"></span>'
