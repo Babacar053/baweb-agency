@@ -42,7 +42,8 @@
     ["creation-site-e-commerce.html", "Site e-commerce"],
     ["site-web-restaurant.html", "Site pour restaurant"],
     ["site-web-ecole-formation.html", "Site pour école et formation"],
-    ["site-web-immobilier.html", "Site immobilier"]
+    ["site-web-immobilier.html", "Site immobilier"],
+    ["site-web-club-sport.html", "Site pour club de sport"]
   ];
 
   /* ---------- En-tête ---------- */
