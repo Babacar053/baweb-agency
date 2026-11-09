@@ -29,7 +29,7 @@ jobs:
       - name: Préparer le dossier publié
         run: |
           mkdir _site
-          cp -r *.html robots.txt sitemap.xml .nojekyll assets _site/
+          cp -r *.html favicon.ico robots.txt sitemap.xml .nojekyll assets _site/
 
       - name: Configurer Pages
         uses: actions/configure-pages@v5
