@@ -1,5 +1,6 @@
 /* =========================================================
-   Écran d'intro — affiché une fois par visite (session).
+   Écran d'intro — affiché à l'arrivée sur le site et à chaque
+   rechargement, mais pas en passant d'une page à l'autre.
    Le contenu est visible par défaut : les animations ne font
    que l'embellir, et la fermeture repose sur un minuteur.
    Il reste donc affiché même si les animations sont désactivées.
@@ -16,7 +17,13 @@
   function dejaVue() {
     try { return sessionStorage.getItem(KEY) === "1"; } catch (e) { return false; }
   }
-  if (!force && dejaVue()) return;
+  function estRechargement() {
+    try {
+      var nav = performance.getEntriesByType("navigation")[0];
+      return !!nav && nav.type === "reload";
+    } catch (e) { return false; }
+  }
+  if (!force && !estRechargement() && dejaVue()) return;
   try { sessionStorage.setItem(KEY, "1"); } catch (e) { /* stockage indisponible */ }
 
   var shortName = S.shortName || "BaWeb";

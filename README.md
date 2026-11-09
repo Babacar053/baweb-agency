@@ -44,7 +44,7 @@ Elle apparaît automatiquement sur l'accueil, la page Réalisations et À propos
 Seules les icônes utilisées sont incluses (`icons-subset.css`) : une nouvelle icône Bootstrap doit y être ajoutée.
 Pour une réalisation, une image réduite est facultative (champ `imageSmall`, 640 px de large).
 
-**Intro :** réglages dans `assets/js/intro.js`. Ajoutez `?intro=1` à l'adresse pour la revoir.
+**Intro :** réglages dans `assets/js/intro.js`. Elle s'affiche à l'arrivée et à chaque rechargement.
 
 ## Tester en local
 
